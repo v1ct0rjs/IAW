@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Autor de la Página">
+    <meta name="description" content="Página con audio y video">
+    <meta name="keywords" content="HTML5, audio, video, tutorial">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia en HTML5</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a la Página de Multimedia</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Galería</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Videos</h2>
+            <video id="video1" width="600" controls>
+                <source src="media/video1.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <video id="video2" width="600" controls>
+                <source src="media/video2.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </section>
+        <section>
+            <h2>Audios</h2>
+            <audio id="audio1" controls>
+                <source src="media/audio1.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+            <audio id="audio2" controls>
+                <source src="media/audio2.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Página de Multimedia</p>
+    </footer>
+    <script>
+        let video1 = document.getElementById("video1");
+        video1.onclick = function () {
+            if (!video1.paused && !video1.ended) {
+                video1.pause();
+            } else {
+                video1.play();
+            }
+        };
+
+        let video2 = document.getElementById("video2");
+        video2.onclick = function () {
+            if (!video2.paused && !video2.ended) {
+                video2.pause();
+            } else {
+                video2.play();
+            }
+        };
+
+        let audio1 = document.getElementById("audio1");
+        audio1.onplay = function () {
+        };
+
+        let audio2 = document.getElementById("audio2");
+        audio2.onpause = function () {
+        };
+    </script>
+</body>
+</html>
