@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Completo</title>
 </head>
 <body>
+
+    <h2>Formulario Completo</h2>
+    <form action="#" method="POST">
+        <div class="form-group">
+            <label for="range">Rango:</label>
+            <input type="range" id="range" name="range" min="0" max="100" step="1">
+        </div>
+        <div class="form-group">
+            <label for="number">Número:</label>
+            <input type="number" id="number" name="number" min="1" max="10" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Fecha:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+            <label for="color">Color:</label>
+            <input type="color" id="color" name="color" value="#ff0000">
+        </div>
+        <div class="form-group">
+            <label for="datalist">Lista de opciones:</label>
+            <input list="options" id="datalist" name="datalist" placeholder="Seleccione una opción" required>
+            <datalist id="options">
+                <option value="Opción 1">
+                <option value="Opción 2">
+                <option value="Opción 3">
+            </datalist>
+        </div>
+        <div class="form-group">
+            <label for="pattern">Patrón (solo letras):</label>
+            <input type="text" id="pattern" name="pattern" pattern="[A-Za-z]+" placeholder="Ingrese solo letras" required>
+        </div>
+        <div class="form-group">
+            <label for="autofocus">Autofocus:</label>
+            <input type="text" id="autofocus" name="autofocus" placeholder="Este campo tiene autofocus" autofocus>
+        </div>
+        <div class="form-group">
+            <label for="autocomplete">Autocompletar:</label>
+            <input type="text" id="autocomplete" name="autocomplete" placeholder="Ingrese texto" autocomplete="on">
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
 
 </body>
 </html>
