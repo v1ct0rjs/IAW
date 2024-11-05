@@ -1,0 +1,33 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #333; /* Dark background color */
+  color: white; /* Light text color for contrast */
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+.linear-gradient {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.radial-gradient {
+  background: radial-gradient(circle, #ff7e5f, #feb47b);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
