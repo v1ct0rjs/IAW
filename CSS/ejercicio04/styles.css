@@ -3,8 +3,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
-  background-color: #333; /* Dark background color */
-  color: white; /* Light text color for contrast */
+  background-color: #333;
+  color: white;
 }
 
 header {
