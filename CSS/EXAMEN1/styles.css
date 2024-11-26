@@ -1,0 +1,32 @@
+body{
+    background: blue;
+} 
+
+img {
+    width: 30%;
+    padding: 10px;
+    
+}
+
+div {
+    font-family: sans-serif;
+    text-align: center;
+    border: 1px;
+    box-shadow: 20%, black;
+    background-color: white;
+    width: 70%;
+    margin: 30px auto;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    r
+    
+}
+
+h2 {
+    color: black;
+} 
+
+p {
+    color: gray;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Formulario</h1>
+    </header>
+    <main>
+        <section>
+            <table>
+                <tr>
+                    <td>
+                        <h2>Datos personales</h2>
+                        <form>
+                            <label for="apellidos">Apellidos:</label>
+                            <input type="text" name="apellidos" id="apellidos" required><hr>
+
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" name="nombre" id="nombre" required><hr>
+
+                            <label for="dni">DNI:</label>
+                            <input type="text" name="dni" id="dni" required><hr>
+
+                            <label for="nacimiento">Nacido/a en:</label>
+                            <input type="text" name="nacimiento" id="nacimiento"><hr>
+
+                            <label for="provincia">Provincia:</label>
+                            <select name="provincia" id="provincia" required>
+                                <option value="badajoz">Badajoz</option>
+                                <option value="caceres">Cáceres</option>
+                            </select><hr>
+
+                            <label for="fecha">Fecha de nacimiento:</label>
+                            <input type="date" name="fecha" id="fecha"><hr>
+
+                            <label for="domicilio">Domicilio:</label>
+                            <input type="text" name="domicilio" id="domicilio"><hr>
+
+                            <label for="cp">Código Postal:</label>
+                            <input type="text" name="cp" id="cp"><hr>
+
+                            <label for="localidad">Localidad:</label>
+                            <input type="text" name="localidad" id="localidad"><hr>
+
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" name="telefono" id="telefono"><hr>
+
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" name="email" id="email"><hr>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table>
+                <tr>
+                    <td>
+                        <h2>Solicitud</h2>
+                        <form>
+                            <label for="ciclo">Ciclo Formativo:</label>
+                            <input type="text" name="ciclo" id="ciclo" required><hr>
+
+                            <p>En caso de no ser admitido/a, solicita la admisión por orden de preferencia en los siguientes:</p>
+
+                            <label for="ciclos">Ciclos formativos:</label>
+                            <input type="text" name="ciclos" id="ciclos" required><hr>
+
+                            <label for="centro">Centros:</label>
+                            <input type="text" name="centro" id="centro" required><hr>
+
+                            <label for="modalidad">Modalidad de horario especial:</label>
+                            <input type="checkbox" name="modalidad" id="modalidad"><hr>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table>
+                <tr>
+                    <td>
+                        <h2>Documentación Presentada</h2>
+                        <form>
+                            <input type="checkbox" name="fotocopia" id="fotocopia">
+                            <label for="fotocopia">Fotocopia DNI</label><hr>
+
+                            <input type="checkbox" name="certificado" id="certificado">
+                            <label for="certificado">Certificado académico</label><hr>
+
+                            <label for="otros">Otros documentos, especifique:</label>
+                            <input type="text" name="otros" id="otros"><hr>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <form>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
