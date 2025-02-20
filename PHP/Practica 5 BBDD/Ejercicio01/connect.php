@@ -12,24 +12,42 @@
         die('No pudo conectarse: ' . mysql_error());
     }
     
+    $sql = "CREATE DATABASE IF NOT EXISTS gestion";
 
-    $tabla = "CREATE TABLE IF NOT EXISTS agenda (";
-    $tabla .= "id INT NOT NULL AUTO_INCREMENT, ";
+    $tabla = "CREATE TABLE IF NOT EXISTS usuarios (";
+    $tabla .= "dni PRIMARY KEY VARCHAR(9) NOT NULL, ";
     $tabla .= "nombre CHAR(50), ";
-    $tabla .= "direccion CHAR(100), ";
-    $tabla .= "telefono CHAR(15), ";
-    $tabla .= "email CHAR(50), ";
-    $tabla .= "KEY (id) ) ";
+    $tabla .= "apellidos CHAR(50), ";
+    $tabla .= "localidad CHAR(100), ";
+    $tabla .= "centro CHAR(25), ";
+    $tabla .= "usuario CHAR(50), ";
+    $tabla .= "pass CHAR(50) ); ";
 
     if (mysql_query($sql, $conn)) {
         echo "La base de datos gestion se creó correctamente\n";
     } else {
         echo 'Error al crear la base de datos: ' . mysql_error() . "\n";
     }
-    mysql_query($tabla_usuarios, $conn);
+    mysql_query($tabla, $conn);
 
     if (isset($_POST["enviar"])){
+        $dni = $_POST["dni"];
+        $nombre = $_POST["nombre"];
+        $apellidos = $_POST["apellidos"];
+        $localidad = $_POST["localidad"];
+        $centro = $_POST["centro"];
+        $usuario = $_POST["usuario"];
+        $pass = $_POST["pass"];
 
+        $insert = "INSERT INTO usuarios( ";
+        $insert .= "dni, nombre, apellidos, ";
+        $insert .= "localidad, centro, usuario, pass) ";
+        $insert .= "VALUES ($dni, $nombre, $apellidos, $localidad, $centro, $usuario, $pass); ";
+
+        mysql_query($insert, $conn);
+
+        $select = "SELECT * FROM usuarios WHERE usuario = $usuario";
+        echo mysql_query($select, $conn);
     }
     ?>
 </body>
