@@ -20,7 +20,7 @@
         <label for="usuario">Usuario</label>
         <input type="text" name="usuario" required><br>
         <label for="pass">Contraseña</label>
-        <input type="text" name="pass" required><br>
+        <input type="password" name="pass" required><br>
         <input type="submit" name="enviar" value="enviar"><br><br>
     </form>
     
