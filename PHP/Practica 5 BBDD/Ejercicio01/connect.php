@@ -7,7 +7,14 @@
 </head>
 <body> 
     <?php
-    $conn = mysqli_connect('10.0.20.37', 'v1ct0r', 'vmjimsan', 'gestion');
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "gestion";
+    $socket = "/opt/lampp/var/mysql/mysql.sock";
+
+    $conn = mysqli_connect($servername, $username, $password, $dbname, null, $socket);
+
     if (!$conn) {
         die('No pudo conectarse: ' . mysqli_connect_error());
     } else {
@@ -45,7 +52,6 @@
         $usuario = $_POST["usuario"];
         $pass = $_POST["pass"];
 
-        // Verificar si el usuario ya existe
         $checkUser = "SELECT * FROM usuarios WHERE usuario = '$usuario'";
         $result = mysqli_query($conn, $checkUser);
         if (mysqli_num_rows($result) > 0) {
@@ -57,7 +63,6 @@
             if (mysqli_query($conn, $insert)) {
                 echo "Usuario registrado correctamente.<br>";
                 echo '<a href="index.html">Volver a la página de inicio</a>';
-                // Redirigir a la página de inicio después de 3 segundos
                 header("refresh:3;url=index.html");
             } else {
                 echo "Error al registrar el usuario: " . mysqli_error($conn) . "<br>";
